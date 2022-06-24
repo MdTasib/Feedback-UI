@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FeedbackForm from "./components/FeedbackForm";
 import FeedbackList from "./components/FeedbackList";
 import FeedbackStats from "./components/FeedbackStats";
 import Header from "./components/Header";
@@ -11,7 +12,6 @@ function App() {
 		if (window.confirm("Are you sure delete this feedback?")) {
 			// const newFeedback = [...feedback].filter(item => item.id !== id);
 			// setFeedback(newFeedback);
-
 			setFeedback(feedback.filter(item => item.id !== id));
 		}
 	};
@@ -20,6 +20,7 @@ function App() {
 		<React.Fragment>
 			<Header />
 			<main className='container'>
+				<FeedbackForm />
 				<FeedbackStats feedback={feedback} />
 				<FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
 			</main>
