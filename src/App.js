@@ -7,6 +7,7 @@ import FeedbackStats from "./components/FeedbackStats";
 import Header from "./components/Header";
 import FeedbackData from "./data/FeedbackData";
 import About from "./pages/About";
+import AboutLink from "./components/AboutLink";
 
 function App() {
 	const [feedback, setFeedback] = useState(FeedbackData);
@@ -44,6 +45,7 @@ function App() {
 					/>
 					<Route path='/about' element={<About />} />
 				</Routes>
+				<AboutLink />
 			</React.Fragment>
 		</BrowserRouter>
 	);
